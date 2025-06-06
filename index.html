@@ -3,54 +3,308 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OKAMOTO</title>
+    <title>Parceria Comercial OLFAR × OKAMOTO</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        .logo {
-            max-height: 150px;
-            width: auto;
-        }
-        .hero-section {
+            font-family: 'Inter', sans-serif;
             background-color: #f8f9fa;
-            padding: 4rem 0;
-            margin-bottom: 3rem;
         }
-        .partner-logos {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 2rem 0;
+        .header-bg {
+            background: linear-gradient(90deg, #003366 0%, #006600 100%);
+            color: white;
+            border-bottom-left-radius: 15px;
+            border-bottom-right-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header-bg img {
+            border-radius: 8px; /* Slightly rounded corners for logos */
+        }
+        .destaque {
+            border-left: 4px solid #008000;
+            padding-left: 1rem;
+            background-color: #e6ffe6;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-body {
+            padding: 1.5rem;
+        }
+        .text-success {
+            color: #006600 !important; /* Ensuring a consistent green */
+        }
+        .badge.bg-success {
+            background-color: #008000 !important;
+            padding: 0.6em 0.9em;
+            font-size: 0.9em;
+            border-radius: 50px;
+        }
+        .table-custom th {
+            background-color: #e9f5e9;
+            color: #003366;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .table-custom tbody tr:nth-child(even) {
+            background-color: #f3fcf3;
+        }
+        .table-custom {
+            border-radius: 8px;
+            overflow: hidden; /* Ensures rounded corners on table */
+        }
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background-color: #d1e7dd;
+            border-radius: 2px;
+        }
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 60px;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            width: 25px;
+            height: 25px;
+            background-color: #008000;
+            border-radius: 50%;
+            border: 4px solid #d1e7dd;
+            z-index: 1;
+        }
+        .timeline-content {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+        .timeline-content h3 {
+            color: #006600;
+            font-size: 1.15rem;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background-color: #e9f5e9; /* Light green footer */
+            color: #333;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.05);
+        }
+        .btn-success {
+            background-color: #008000;
+            border-color: #008000;
+            border-radius: 25px;
+            padding: 8px 20px;
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .btn-success:hover {
+            background-color: #006600;
+            border-color: #006600;
+            transform: translateY(-2px);
+        }
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-bg .d-flex {
+                flex-direction: column;
+                text-align: center;
+            }
+            .header-bg img {
+                margin-bottom: 10px;
+            }
+            .header-bg h1 {
+                font-size: 1.25rem;
+                margin-left: 0 !important;
+            }
+            .timeline::before {
+                left: 10px;
+            }
+            .timeline-item {
+                padding-left: 40px;
+            }
+            .timeline-item::before {
+                left: 0;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="hero-section">
+    <!-- Header -->
+    <header class="header-bg py-4">
         <div class="container">
-            <div class="partner-logos">
-                <img src="logo-okamoto.png.jpeg" alt="Logo OKAMOTO" class="logo">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
+                <img src="https://placehold.co/150x50/003366/ffffff?text=OLFAR" alt="OLFAR Logo" style="height: 50px" class="me-md-3 mb-2 mb-md-0">
+                <img src="https://placehold.co/120x40/006600/ffffff?text=OKAMOTO" alt="OKAMOTO Logo" style="height: 40px" class="me-md-3 mb-2 mb-md-0">
+                <h1 class="h4 ms-md-4 mb-0 text-center text-md-start">Parceria Estratégica para a Unidade de Porangatu</h1>
             </div>
-            <h1 class="text-center mt-4">OKAMOTO</h1>
         </div>
-    </div>
+    </header>
 
-    <div class="container mb-5">
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <h2 class="text-center mb-4">Nossa Empresa</h2>
-                <p class="lead text-center">
-                    Excelência e inovação em cada projeto.
-                </p>
-                <p class="text-center">
-                    A OKAMOTO está comprometida em oferecer soluções 
-                    excepcionais e criar valor para nossos clientes através de nossa expertise.
-                </p>
+    <main class="container my-5">
+        <!-- Seção 1: Cenário de Mercado -->
+        <section class="mb-5">
+            <h2 class="h4 text-success mb-4 text-center">🌱 Mercado Goiano - Dados Chave 2024</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h6 text-primary">Produção Agrícola</h3>
+                            <ul class="list-unstyled mb-0">
+                                <li>Soja: 18.7M t <span class="badge bg-success">+11.7%</span></li>
+                                <li>Milho: 12.7M t <span class="badge bg-success">+12.7%</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h6 text-primary">Principais Players</h3>
+                            <ul class="mb-0">
+                                <li>Bunge (1.6k t/dia)</li>
+                                <li>Grupo Brejeiro (2.2k t/dia)</li>
+                                <li>COMIGO (1.8k t/dia)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h6 text-primary">Tendências 2024</h3>
+                            <ul class="mb-0">
+                                <li><span class="badge bg-success">+15%</span> demanda por farelo</li>
+                                <li>IA aplicada à precificação</li>
+                                <li>ESG como diferencial</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção 2: Proposta OKAMOTO -->
+        <section class="mb-5">
+            <h2 class="h4 text-success mb-4 text-center">📈 Modelo de BPO Comercial</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h6 text-primary">Estrutura Operacional</h3>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-success me-2">15</span>
+                                <span>Operadores especializados</span>
+                            </div>
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="badge bg-success me-2">34</span>
+                                <span>Anos de experiência regional</span>
+                            </div>
+                            <div class="destaque">
+                                <p class="mb-0 fw-bold">Tecnologia exclusiva:</p>
+                                <ul class="mb-0">
+                                    <li>Precificação dinâmica via IA</li>
+                                    <li>BI integrado com mercado futuro</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h3 class="h6 text-primary">Comparativo de Modelos</h3>
+                            <div class="table-responsive">
+                                <table class="table table-custom mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Critério</th>
+                                            <th scope="col">In-House</th>
+                                            <th scope="col">OKAMOTO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Custo Anual</td>
+                                            <td>R$ 1.2M</td>
+                                            <td>1-1.5% do faturamento</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ramp-Up</td>
+                                            <td>6-12 meses</td>
+                                            <td>3-6 meses</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Risco Operacional</td>
+                                            <td>Alto</td>
+                                            <td>Gerenciado</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap -->
+        <section class="mb-5">
+            <h2 class="h4 text-success mb-4 text-center">⏱ Roadmap de Implementação</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Fase 1 - Diagnóstico (Semana 1)</h3>
+                        <p class="mb-0">Mapeamento completo da cadeia de valor</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Fase 2 - Piloto (Mês 1-3)</h3>
+                        <p class="mb-0">Implantação gradual com 50% da capacidade</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Fase 3 - Escalonamento (Mês 4-6)</h3>
+                        <p class="mb-0">Expansão para 100% da capacidade operacional</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-4">
+        <div class="container text-center">
+            <p class="mb-2">📞 Contato: <a href="mailto:comercial@okamoto.com.br" class="text-success text-decoration-none fw-bold">comercial@okamoto.com.br</a></p>
+            <p class="mb-3">✉️ Alameda Leopoldo de Bulhões, 740 - St. Pedro Ludovico
+Goiânia - Goiás - Brasil - CEP: 74820-060</p>
+            <div>
+                <a href="#" class="btn btn-success btn-sm">Solicitar Apresentação Completa</a>
             </div>
         </div>
-    </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
