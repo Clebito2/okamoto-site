@@ -248,6 +248,73 @@
             box-shadow: 0 6px 12px rgba(0, 232, 0, 0.4); /* Sombra mais intensa */
         }
 
+        /* Estilo das abas de navegação */
+        .nav-tabs {
+            border-bottom: 2px solid var(--live-verde-vibrante); /* Borda verde na parte inferior das abas */
+            margin-bottom: 30px;
+        }
+        .nav-tabs .nav-item {
+            margin-bottom: -2px; /* Ajusta a posição para sobrepor a borda inferior */
+        }
+        .nav-tabs .nav-link {
+            border: 1px solid transparent;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            color: var(--live-azul-petroleo); /* Cor do texto da aba inativa */
+            background-color: var(--live-cinza-claro); /* Fundo da aba inativa */
+            font-weight: 500;
+            padding: 12px 20px;
+            transition: all 0.3s ease;
+            margin-right: 5px; /* Espaçamento entre as abas */
+            text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.05); /* Sombra suave no texto da aba */
+        }
+        .nav-tabs .nav-link:hover:not(.active) {
+            color: var(--live-verde-vibrante); /* Cor do texto no hover */
+            border-color: transparent;
+            background-color: rgba(0, 232, 0, 0.05); /* Fundo sutil no hover */
+        }
+        .nav-tabs .nav-link.active {
+            background-color: var(--live-text-light); /* Fundo branco para aba ativa */
+            color: var(--live-verde-vibrante); /* Texto verde vibrante para aba ativa */
+            border-color: var(--live-verde-vibrante) var(--live-verde-vibrante) var(--live-text-light); /* Borda inferior some na aba ativa */
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.08); /* Sombra sutil para aba ativa */
+            font-weight: 600;
+        }
+
+        /* Estilo do conteúdo das abas */
+        .tab-content {
+            background-color: var(--live-text-light); /* Fundo branco para o conteúdo da aba */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Sombra similar aos cards */
+        }
+        .tab-content h2 {
+            font-family: 'Merriweather', serif; /* Merriweather para títulos de seção nas abas */
+            font-weight: 700;
+            color: var(--live-verde-vibrante);
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra para títulos de seção */
+        }
+        .tab-content h3 {
+             font-family: 'Poppins', sans-serif; /* Poppins para subtítulos dentro das abas */
+            font-weight: 600;
+            color: var(--live-azul-petroleo);
+            margin-bottom: 15px;
+            text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.08); /* Sombra sutil para subtítulos */
+        }
+        .tab-content p, .tab-content ul li {
+            color: var(--live-text-dark);
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .tab-content strong {
+            color: var(--live-azul-petroleo); /* Negrito em azul petróleo */
+        }
+        .tab-content em {
+            color: var(--live-verde-vibrante); /* Itálico em verde vibrante */
+        }
+
+
         /* Ajustes responsivos */
         @media (max-width: 768px) {
             .header-bg h1 {
@@ -270,6 +337,10 @@
                 height: 30px;
                 border: 4px solid var(--live-cinza-claro);
             }
+            .nav-tabs .nav-link {
+                padding: 10px 15px; /* Ajusta padding das abas no mobile */
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -288,192 +359,233 @@
     </header>
 
     <main class="container my-5">
-        <!-- Seção 1: Cenário de Mercado -->
-        <section class="mb-5">
-            <h2 class="h4 text-success mb-4 text-center">🌱 Mercado Goiano - Dados Chave 2024</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="h6 text-primary">Produção Agrícola</h3>
-                            <ul class="list-unstyled mb-0">
-                                <li>Soja: <span class="fw-bold">18.7M t</span> <span class="badge bg-success">+11.7%</span></li>
-                                <li>Milho: <span class="fw-bold">12.7M t</span> <span class="badge bg-success">+12.7%</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="h6 text-primary">Principais Players</h3>
-                            <ul class="mb-0">
-                                <li>Bunge (<span class="fw-bold">1.6k t/dia</span>)</li>
-                                <li>Grupo Brejeiro (<span class="fw-bold">2.2k t/dia</span>)</li>
-                                <li>COMIGO (<span class="fw-bold">1.8k t/dia</span>)</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="h6 text-primary">Tendências 2024</h3>
-                            <ul class="mb-0">
-                                <li><span class="badge bg-success">+15%</span> demanda por farelo</li>
-                                <li><span class="fw-bold">IA</span> aplicada à precificação</li>
-                                <li><span class="fw-bold">ESG</span> como diferencial</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <!-- Navegação em abas -->
+        <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="proposta-tab" data-bs-toggle="tab" data-bs-target="#proposta" type="button" role="tab" aria-controls="proposta" aria-selected="true">Proposta</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="estudo-tab" data-bs-toggle="tab" data-bs-target="#estudo" type="button" role="tab" aria-controls="estudo" aria-selected="false">Sobre o Estudo</button>
+            </li>
+        </ul>
 
-        <!-- Seção 2: Proposta OKAMOTO -->
-        <section class="mb-5">
-            <h2 class="h4 text-success mb-4 text-center">📈 Modelo de BPO Comercial</h2>
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="h6 text-primary">Estrutura Operacional</h3>
-                            <div class="d-flex align-items-center mb-3">
-                                <span class="badge bg-success me-2">15</span>
-                                <span>Operadores especializados</span>
+        <div class="tab-content" id="myTabContent">
+            <!-- Aba Proposta (Conteúdo Original da Página) -->
+            <div class="tab-pane fade show active" id="proposta" role="tabpanel" aria-labelledby="proposta-tab">
+                <!-- Seção 1: Cenário de Mercado -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">🌱 Mercado Goiano - Dados Chave 2024</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h6 text-primary">Produção Agrícola</h3>
+                                    <ul class="list-unstyled mb-0">
+                                        <li>Soja: <span class="fw-bold">18.7M t</span> <span class="badge bg-success">+11.7%</span></li>
+                                        <li>Milho: <span class="fw-bold">12.7M t</span> <span class="badge bg-success">+12.7%</span></li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="d-flex align-items-center mb-3">
-                                <span class="badge bg-success me-2">34</span>
-                                <span>Anos de experiência regional</span>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h6 text-primary">Principais Players</h3>
+                                    <ul class="mb-0">
+                                        <li>Bunge (<span class="fw-bold">1.6k t/dia</span>)</li>
+                                        <li>Grupo Brejeiro (<span class="fw-bold">2.2k t/dia</span>)</li>
+                                        <li>COMIGO (<span class="fw-bold">1.8k t/dia</span>)</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="destaque">
-                                <p class="mb-0 fw-bold">Tecnologia exclusiva:</p>
-                                <ul class="mb-0">
-                                    <li>Precificação dinâmica via <span class="fw-bold">IA</span></li>
-                                    <li><span class="fw-bold">BI</span> integrado com mercado futuro</li>
-                                </ul>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h6 text-primary">Tendências 2024</h3>
+                                    <ul class="mb-0">
+                                        <li><span class="badge bg-success">+15%</span> demanda por farelo</li>
+                                        <li><span class="fw-bold">IA</span> aplicada à precificação</li>
+                                        <li><span class="fw-bold">ESG</span> como diferencial</li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="col-lg-6">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="h6 text-primary">Comparativo de Modelos</h3>
-                            <div class="table-responsive">
-                                <table class="table table-custom mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Critério</th>
-                                            <th scope="col">In-House</th>
-                                            <th scope="col">OKAMOTO</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Custo Anual</td>
-                                            <td><span class="fw-bold">R$ 1.2M</span></td>
-                                            <td><span class="fw-bold">1-1.5%</span> do faturamento</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ramp-Up</td>
-                                            <td><span class="fw-bold">6-12 meses</span></td>
-                                            <td><span class="fw-bold">3-6 meses</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td>Risco Operacional</td>
-                                            <td><span class="fw-bold">Alto</span></td>
-                                            <td><span class="fw-bold">Gerenciado</span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <!-- Roadmap -->
-        <section class="mb-5">
-            <h2 class="h4 text-success mb-4 text-center">⏱ Roadmap de Implementação</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Fase 1 - Diagnóstico (Semana 1)</h3>
-                        <p class="mb-0">Mapeamento completo da cadeia de valor</p>
+                <!-- Seção 2: Proposta OKAMOTO -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">📈 Modelo de BPO Comercial</h2>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h6 text-primary">Estrutura Operacional</h3>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="badge bg-success me-2">15</span>
+                                        <span>Operadores especializados</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="badge bg-success me-2">34</span>
+                                        <span>Anos de experiência regional</span>
+                                    </div>
+                                    <div class="destaque">
+                                        <p class="mb-0 fw-bold">Tecnologia exclusiva:</p>
+                                        <ul class="mb-0">
+                                            <li>Precificação dinâmica via <span class="fw-bold">IA</span></li>
+                                            <li><span class="fw-bold">BI</span> integrado com mercado futuro</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h6 text-primary">Comparativo de Modelos</h3>
+                                    <div class="table-responsive">
+                                        <table class="table table-custom mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Critério</th>
+                                                    <th scope="col">In-House</th>
+                                                    <th scope="col">OKAMOTO</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Custo Anual</td>
+                                                    <td><span class="fw-bold">R$ 1.2M</span></td>
+                                                    <td><span class="fw-bold">1-1.5%</span> do faturamento</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Ramp-Up</td>
+                                                    <td><span class="fw-bold">6-12 meses</span></td>
+                                                    <td><span class="fw-bold">3-6 meses</span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Risco Operacional</td>
+                                                    <td><span class="fw-bold">Alto</span></td>
+                                                    <td><span class="fw-bold">Gerenciado</span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Fase 2 - Piloto (Mês 1-3)</h3>
-                        <p class="mb-0">Implantação gradual com 50% da capacidade</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Fase 3 - Escalonamento (Mês 4-6)</h3>
-                        <p class="mb-0">Expansão para 100% da capacidade operacional</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <!-- Seção 3: Estudo de Mercado e Viabilidade -->
-        <section class="mb-5">
-            <h2 class="h4 text-success mb-4 text-center">📊 Estudo de Mercado e Análise de Viabilidade</h2>
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="h6 text-primary">Análise de Mercado</h3>
-                            <ul class="mb-0">
-                                <li><span class="fw-bold">Tamanho do Mercado Alvo:</span> Região Norte de Goiás - <span class="fw-bold text-success">R$ 5 Bilhões</span> (Soja/Milho)</li>
-                                <li><span class="fw-bold">Potencial de Crescimento:</span> <span class="fw-bold text-success">8% ao ano</span> nos próximos 5 anos</li>
-                                <li><span class="fw-bold">Competição:</span> Fragmentada, com poucos players dominantes locais</li>
-                                <li><span class="fw-bold">Oportunidade:</span> Lacuna em serviços de BPO especializados e tecnológicos</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h3 class="h6 text-primary">Viabilidade Econômica</h3>
-                            <div class="table-responsive">
-                                <table class="table table-custom mb-0">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col">Métrica</th>
-                                            <th scope="col">Projeção (OKAMOTO)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>ROI Projetado</td>
-                                            <td class="fw-bold text-success">>30% (Ano 1)</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Margem Operacional</td>
-                                            <td class="fw-bold">18-22%</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Break-even</td>
-                                            <td class="fw-bold">6-9 meses</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                <!-- Roadmap -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">⏱ Roadmap de Implementação</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Fase 1 - Diagnóstico (Semana 1)</h3>
+                                <p class="mb-0">Mapeamento completo da cadeia de valor</p>
                             </div>
-                            <div class="destaque mt-3">
-                                <p class="mb-0 fw-bold text-success">Conclusão do Estudo:</p>
-                                <p class="mb-0">A parceria é <span class="fw-bold text-success">altamente viável</span> e estratégica para otimizar operações e capturar valor no mercado goiano.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Fase 2 - Piloto (Mês 1-3)</h3>
+                                <p class="mb-0">Implantação gradual com 50% da capacidade</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-content">
+                                <h3>Fase 3 - Escalonamento (Mês 4-6)</h3>
+                                <p class="mb-0">Expansão para 100% da capacidade operacional</p>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
+
+                <!-- Seção 3: Estudo de Mercado e Viabilidade -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">📊 Estudo de Mercado e Análise de Viabilidade</h2>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h6 text-primary">Análise de Mercado</h3>
+                                    <ul class="mb-0">
+                                        <li><span class="fw-bold">Tamanho do Mercado Alvo:</span> Região Norte de Goiás - <span class="fw-bold text-success">R$ 5 Bilhões</span> (Soja/Milho)</li>
+                                        <li><span class="fw-bold">Potencial de Crescimento:</span> <span class="fw-bold text-success">8% ao ano</span> nos próximos 5 anos</li>
+                                        <li><span class="fw-bold">Competição:</span> Fragmentada, com poucos players dominantes locais</li>
+                                        <li><span class="fw-bold">Oportunidade:</span> Lacuna em serviços de BPO especializados e tecnológicos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h6 text-primary">Viabilidade Econômica</h3>
+                                    <div class="table-responsive">
+                                        <table class="table table-custom mb-0">
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">Métrica</th>
+                                                    <th scope="col">Projeção (OKAMOTO)</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>ROI Projetado</td>
+                                                    <td class="fw-bold text-success">>30% (Ano 1)</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Margem Operacional</td>
+                                                    <td class="fw-bold">18-22%</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Break-even</td>
+                                                    <td class="fw-bold">6-9 meses</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="destaque mt-3">
+                                        <p class="mb-0 fw-bold text-success">Conclusão do Estudo:</p>
+                                        <p class="mb-0">A parceria é <span class="fw-bold text-success">altamente viável</span> e estratégica para otimizar operações e capturar valor no mercado goiano.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
+
+            <!-- Aba Sobre o Estudo (Conteúdo Novo) -->
+            <div class="tab-pane fade" id="estudo" role="tabpanel" aria-labelledby="estudo-tab">
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4">🔎 Sobre o Estudo e Fundamentação</h2>
+                    <p>
+                        Este estudo foi elaborado a partir de uma análise detalhada dos dados históricos de clientes e compradores de farelo de soja em Goiás, cruzando informações do arquivo fornecido com pesquisas de mercado recentes. Foram analisados:
+                    </p>
+                    <ul>
+                        <li>Volumes históricos de vendas e distribuição geográfica dos principais clientes do estado.</li>
+                        <li>Capacidade de processamento das principais indústrias esmagadoras de soja em Goiás, como Grupo Brejeiro, Bunge, Grupo Cereal e COMIGO.</li>
+                        <li>Tendências de crescimento do setor, com destaque para o aumento da demanda por farelo de soja, investimentos em capacidade industrial e adoção de tecnologia para inteligência comercial.</li>
+                    </ul>
+                    <p>
+                        A proposta de terceirização comercial foi fundamentada em benchmarks do setor, dados públicos (como IBGE, SEAPA, CNA Brasil, FAEG, sites institucionais das indústrias e consultorias especializadas), além de literatura acadêmica sobre terceirização no agronegócio.<br>
+                        <strong>Referência acadêmica:</strong> "Terceirização no agronegócio: um panorama da atualidade", APREPRO/UTFPR (2021) – que destaca a terceirização como estratégia para redução de custos, concentração no core business e mitigação de riscos operacionais.<br>
+                        <strong>Cases e tendências:</strong> Joint ventures logísticas entre Amaggi, ADM, Cargill e Louis Dreyfus, e investimentos em plataformas digitais como Grão Direto, evidenciam a busca por eficiência via parcerias e outsourcing no agro brasileiro.
+                    </p>
+                    <p>
+                        <strong>Metodologia:</strong> O diagnóstico considerou a estrutura e experiência da OKAMOTO, a análise do potencial de mercado da OLFAR em Goiás e os desafios de integração sistêmica, ramp-up comercial e competitividade regional.
+                    </p>
+                    <p>
+                        <em>Para mais detalhes, consulte o arquivo-base ou solicite a apresentação técnica completa.</em>
+                    </p>
+                </section>
+            </div>
+        </div>
     </main>
 
     <!-- Rodapé da página -->
