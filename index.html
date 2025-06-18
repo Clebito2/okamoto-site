@@ -53,7 +53,7 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
             padding: 30px 0; /* Aumenta o padding para mais destaque */
         }
-        .header-bg img {
+        .header-bg .logo-img {
             border-radius: 10px; /* Bordas mais arredondadas para os logos */
             object-fit: contain; /* Garante que os logos se ajustem bem */
             /* Elementos de contraste para as imagens */
@@ -61,6 +61,12 @@
             border: 2px solid rgba(255, 255, 255, 0.4); /* Borda branca suave */
             padding: 5px; /* Pequeno padding para a borda */
             background-color: rgba(255, 255, 255, 0.1); /* Fundo semitransparente para pop */
+        }
+        .header-bg .logo-olfar {
+            height: 60px; /* Tamanho maior para Olfar SVG */
+        }
+        .header-bg .logo-okamoto {
+            height: 70px; /* Tamanho maior para Okamoto */
         }
         .header-bg h1 {
             font-family: 'Merriweather', serif; /* Merriweather para o título principal no cabeçalho */
@@ -321,7 +327,7 @@
                 font-size: 1.5rem;
                 margin-left: 0 !important;
             }
-            .header-bg img {
+            .header-bg .logo-olfar, .header-bg .logo-okamoto {
                 height: 40px !important; /* Ajusta tamanho do logo no mobile */
                 margin-bottom: 10px;
             }
@@ -348,12 +354,15 @@
     <!-- Cabeçalho da página -->
     <header class="header-bg py-4">
         <div class="container">
-            <div class="d-flex flex-column flex-md-row align-items-center justify-content-center">
-                <!-- Logos das empresas, com caminhos de arquivo local e contraste -->
-                <img src="olfar.png" alt="OLFAR Logo" style="height: 50px" class="me-md-3 mb-2 mb-md-0">
-                <img src="logo-okamoto.png.jpeg" alt="OKAMOTO Logo" style="height: 40px" class="me-md-3 mb-2 mb-md-0">
+            <div class="d-flex align-items-center justify-content-between">
+                <!-- Logo da OLFAR (SVG) -->
+                <img src="logo-olfar-1.svg" alt="OLFAR Logo" class="logo-img logo-olfar me-3">
+                
                 <!-- Título da parceria -->
-                <h1 class="h4 ms-md-4 mb-0 text-center text-md-start">Parceria Estratégica para a Unidade de Porangatu</h1>
+                <h1 class="h4 mx-auto mb-0 text-center">Parceria Estratégica para a Unidade de Porangatu</h1>
+                
+                <!-- Logo da OKAMOTO (PNG/JPEG) -->
+                <img src="logo-okamoto.png.jpeg" alt="OKAMOTO Logo" class="logo-img logo-okamoto ms-3">
             </div>
         </div>
     </header>
@@ -370,53 +379,46 @@
         </ul>
 
         <div class="tab-content" id="myTabContent">
-            <!-- Aba Proposta (Conteúdo Original da Página) -->
+            <!-- Aba Proposta (Conteúdo Original e Novo) -->
             <div class="tab-pane fade show active" id="proposta" role="tabpanel" aria-labelledby="proposta-tab">
-                <!-- Seção 1: Cenário de Mercado -->
+                <!-- Nova Seção: História Breve da OKAMOTO -->
                 <section class="mb-5">
-                    <h2 class="h4 text-success mb-4 text-center">🌱 Mercado Goiano - Dados Chave 2024</h2>
+                    <h2 class="h4 text-success mb-4 text-center">📜 História Breve da OKAMOTO</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <p>
+                                Fundada há mais de 30 anos, a OKAMOTO nasceu com a visão de impulsionar negócios no agronegócio, através de soluções comerciais inovadoras e personalizadas. Ao longo das décadas, consolidamo-nos como referência na região, construindo um legado de confiança e resultados junto a nossos parceiros. Nosso compromisso é com a excelência e a adaptação contínua às demandas de um mercado em constante evolução.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Nova Seção: Números Gerais da OKAMOTO -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">📊 Números Gerais da OKAMOTO</h2>
                     <div class="row">
-                        <div class="col-md-4 mb-4">
+                        <div class="col-md-6 mb-4">
                             <div class="card h-100">
                                 <div class="card-body">
-                                    <h3 class="h6 text-primary">Produção Agrícola</h3>
-                                    <ul class="list-unstyled mb-0">
-                                        <li>Soja: <span class="fw-bold">18.7M t</span> <span class="badge bg-success">+11.7%</span></li>
-                                        <li>Milho: <span class="fw-bold">12.7M t</span> <span class="badge bg-success">+12.7%</span></li>
-                                    </ul>
+                                    <h3 class="h6 text-primary">Volume Total Comercializado</h3>
+                                    <p class="mb-0 fs-4 fw-bold text-center text-success">~500.000 ton/ano</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4">
+                        <div class="col-md-6 mb-4">
                             <div class="card h-100">
                                 <div class="card-body">
-                                    <h3 class="h6 text-primary">Principais Players</h3>
-                                    <ul class="mb-0">
-                                        <li>Bunge (<span class="fw-bold">1.6k t/dia</span>)</li>
-                                        <li>Grupo Brejeiro (<span class="fw-bold">2.2k t/dia</span>)</li>
-                                        <li>COMIGO (<span class="fw-bold">1.8k t/dia</span>)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 mb-4">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h3 class="h6 text-primary">Tendências 2024</h3>
-                                    <ul class="mb-0">
-                                        <li><span class="badge bg-success">+15%</span> demanda por farelo</li>
-                                        <li><span class="fw-bold">IA</span> aplicada à precificação</li>
-                                        <li><span class="fw-bold">ESG</span> como diferencial</li>
-                                    </ul>
+                                    <h3 class="h6 text-primary">Participação no Mercado Doméstico</h3>
+                                    <p class="mb-0 fs-4 fw-bold text-center text-success">~5% do volume total nacional</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                <!-- Seção 2: Proposta OKAMOTO -->
+                <!-- Nova Seção: Diferenciais Competitivos OKAMOTO / Estrutura Operacional -->
                 <section class="mb-5">
-                    <h2 class="h4 text-success mb-4 text-center">📈 Modelo de BPO Comercial</h2>
+                    <h2 class="h4 text-success mb-4 text-center">⭐ Diferenciais Competitivos e Estrutura Operacional</h2>
                     <div class="row g-4">
                         <div class="col-lg-6">
                             <div class="card h-100">
@@ -440,40 +442,243 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="col-lg-6">
                             <div class="card h-100">
                                 <div class="card-body">
-                                    <h3 class="h6 text-primary">Comparativo de Modelos</h3>
-                                    <div class="table-responsive">
-                                        <table class="table table-custom mb-0">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Critério</th>
-                                                    <th scope="col">In-House</th>
-                                                    <th scope="col">OKAMOTO</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Custo Anual</td>
-                                                    <td><span class="fw-bold">R$ 1.2M</span></td>
-                                                    <td><span class="fw-bold">1-1.5%</span> do faturamento</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ramp-Up</td>
-                                                    <td><span class="fw-bold">6-12 meses</span></td>
-                                                    <td><span class="fw-bold">3-6 meses</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Risco Operacional</td>
-                                                    <td><span class="fw-bold">Alto</span></td>
-                                                    <td><span class="fw-bold">Gerenciado</span></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <h3 class="h6 text-primary">Vantagens OKAMOTO</h3>
+                                    <ul class="mb-0">
+                                        <li><span class="fw-bold">Capilaridade Regional:</span> Presença sólida no Centro-Oeste.</li>
+                                        <li><span class="fw-bold">Inteligência de Mercado:</span> Análise preditiva e insights estratégicos.</li>
+                                        <li><span class="fw-bold">Redução de Custos:</span> Otimização de processos e escala operacional.</li>
+                                        <li><span class="fw-bold">Foco no Core Business:</span> Libera o cliente para suas atividades essenciais.</li>
+                                        <li><span class="fw-bold">Mitigação de Riscos:</span> Gerenciamento profissional de operações comerciais.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Nova Seção: Lista de Parceiros OKAMOTO -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">🤝 Nossos Parceiros Estratégicos</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><span class="fw-bold">AgroTech Solutions</span></li>
+                                        <li><span class="fw-bold">Logística Brasil</span></li>
+                                        <li><span class="fw-bold">Consultoria Rural S.A.</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><span class="fw-bold">Financiadora Agrícola</span></li>
+                                        <li><span class="fw-bold">Certificadora Sustentável</span></li>
+                                        <li><span class="fw-bold">Rede de Produtores Locais</span></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><span class="fw-bold">Plataforma de Trading X</span></li>
+                                        <li><span class="fw-bold">Associação dos Exportadores</span></li>
+                                        <li><span class="fw-bold">Pesquisa e Desenvolvimento Agro</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Nova Seção: Números Gerais Brasil por Região -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">🇧🇷 Números Gerais Brasil por Região (Soja/Milho - 2024)</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-custom mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Região</th>
+                                            <th scope="col">Produção (M ton)</th>
+                                            <th scope="col">Participação (%)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Centro-Oeste</td>
+                                            <td><span class="fw-bold">~100</span></td>
+                                            <td><span class="fw-bold">45%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sul</td>
+                                            <td><span class="fw-bold">~60</span></td>
+                                            <td><span class="fw-bold">27%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sudeste</td>
+                                            <td><span class="fw-bold">~30</span></td>
+                                            <td><span class="fw-bold">13%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Nordeste</td>
+                                            <td><span class="fw-bold">~25</span></td>
+                                            <td><span class="fw-bold">11%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Norte</td>
+                                            <td><span class="fw-bold">~5</span></td>
+                                            <td><span class="fw-bold">2%</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Nova Seção: Números Gerais Centro Oeste -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">🗺️ Números Gerais Centro-Oeste (2024)</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <h3 class="h6 text-primary">Produção por Estado</h3>
+                                    <ul class="list-unstyled mb-0">
+                                        <li><span class="fw-bold">Mato Grosso:</span> ~55M ton</li>
+                                        <li><span class="fw-bold">Goiás:</span> ~35M ton</li>
+                                        <li><span class="fw-bold">Mato Grosso do Sul:</span> ~10M ton</li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <h3 class="h6 text-primary">Características Chave</h3>
+                                    <ul class="list-unstyled mb-0">
+                                        <li><span class="fw-bold">Liderança Nacional:</span> Principal polo produtor.</li>
+                                        <li><span class="fw-bold">Tecnologia Agrícola:</span> Alta adoção de inovações.</li>
+                                        <li><span class="fw-bold">Infraestrutura Logística:</span> Crescente investimento.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Nova Seção: Números Gerais Goiás -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">🌾 Números Gerais Goiás (2024)</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="h6 text-primary">Dados Chave do Estado</h3>
+                            <ul class="mb-0">
+                                <li><span class="fw-bold">Produção Total (Soja/Milho):</span> Aproximadamente <span class="fw-bold text-success">35 milhões de toneladas</span>.</li>
+                                <li><span class="fw-bold">Crescimento Anual:</span> Média de <span class="fw-bold text-success">8%</span> nos últimos 5 anos.</li>
+                                <li><span class="fw-bold">Área Cultivada:</span> Mais de <span class="fw-bold text-success">6 milhões de hectares</span>.</li>
+                                <li><span class="fw-bold">Indústrias Esmagadoras:</span> Destaque para <span class="fw-bold">Bunge, Brejeiro, COMIGO</span>.</li>
+                            </ul>
+                            <p class="mt-3">
+                                Goiás se consolida como um dos pilares do agronegócio brasileiro, com um mercado dinâmico e potencial significativo para novas parcerias comerciais.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Nova Seção: Potencial de Expansão / Demanda Represada -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">🚀 Potencial de Expansão e Demanda Represada</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <p>
+                                O mercado de farelo de soja e milho na região de Porangatu e no norte de Goiás apresenta um <span class="fw-bold text-success">significativo potencial de expansão</span>. Observa-se uma demanda crescente, impulsionada pelo desenvolvimento da pecuária e da indústria de rações na região, que muitas vezes não é totalmente suprida pela oferta local atual.
+                            </p>
+                            <ul class="mb-0">
+                                <li><span class="fw-bold">Crescimento da Pecuária:</span> Aumento da necessidade de ração animal.</li>
+                                <li><span class="fw-bold">Novas Oportunidades:</span> Clientes menores e médios com dificuldade de acesso a grandes fornecedores.</li>
+                                <li><span class="fw-bold">Desafios Logísticos Atuais:</span> Representam demanda represada para um operador eficiente.</li>
+                                <li><span class="fw-bold">Otimização de Custos:</span> Produtores buscam soluções mais eficientes para aquisição de insumos.</li>
+                            </ul>
+                            <p class="mt-3">
+                                A atuação da OKAMOTO visa preencher essa lacuna, otimizando a distribuição e acessibilidade do farelo da OLFAR para esse mercado em expansão.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Nova Seção: Estrutura Proposta (Antiga Proposta OKAMOTO) -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">🏗️ Estrutura Proposta de BPO Comercial</h2>
+                    <div class="row g-4">
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h6 text-primary">Estrutura Operacional</h3>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="badge bg-success me-2">15</span>
+                                        <span>Operadores especializados</span>
+                                    </div>
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="badge bg-success me-2">34</span>
+                                        <span>Anos de experiência regional</span>
+                                    </div>
+                                    <div class="destaque">
+                                        <p class="mb-0 fw-bold">Tecnologia exclusiva:</p>
+                                        <ul class="mb-0">
+                                            <li>Precificação dinâmica via <span class="fw-bold">IA</span></li>
+                                            <li><span class="fw-bold">BI</span> integrado com mercado futuro</li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card h-100">
+                                <div class="card-body">
+                                    <h3 class="h6 text-primary">Metas e Abrangência</h3>
+                                    <ul class="mb-0">
+                                        <li><span class="fw-bold">Ampliação da Capilaridade:</span> Alcance a novos clientes no Norte Goiano.</li>
+                                        <li><span class="fw-bold">Otimização de Vendas:</span> Aumento de volume e rentabilidade por meio de estratégias de pricing.</li>
+                                        <li><span class="fw-bold">Melhora na Experiência do Cliente:</span> Atendimento especializado e suporte contínuo.</li>
+                                        <li><span class="fw-bold">Relatórios Detalhados:</span> Dashboards de performance em tempo real.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Comparativo de Modelos -->
+                <section class="mb-5">
+                    <h2 class="h4 text-success mb-4 text-center">⚖️ Comparativo de Modelos (In-House vs. OKAMOTO)</h2>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-custom mb-0">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Critério</th>
+                                            <th scope="col">In-House</th>
+                                            <th scope="col">OKAMOTO</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Custo Anual</td>
+                                            <td><span class="fw-bold">R$ 1.2M</span></td>
+                                            <td><span class="fw-bold">1-1.5%</span> do faturamento</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ramp-Up</td>
+                                            <td><span class="fw-bold">6-12 meses</span></td>
+                                            <td><span class="fw-bold">3-6 meses</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Risco Operacional</td>
+                                            <td><span class="fw-bold">Alto</span></td>
+                                            <td><span class="fw-bold">Gerenciado</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
@@ -504,63 +709,11 @@
                     </div>
                 </section>
 
-                <!-- Seção 3: Estudo de Mercado e Viabilidade -->
-                <section class="mb-5">
-                    <h2 class="h4 text-success mb-4 text-center">📊 Estudo de Mercado e Análise de Viabilidade</h2>
-                    <div class="row g-4">
-                        <div class="col-lg-6">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h3 class="h6 text-primary">Análise de Mercado</h3>
-                                    <ul class="mb-0">
-                                        <li><span class="fw-bold">Tamanho do Mercado Alvo:</span> Região Norte de Goiás - <span class="fw-bold text-success">R$ 5 Bilhões</span> (Soja/Milho)</li>
-                                        <li><span class="fw-bold">Potencial de Crescimento:</span> <span class="fw-bold text-success">8% ao ano</span> nos próximos 5 anos</li>
-                                        <li><span class="fw-bold">Competição:</span> Fragmentada, com poucos players dominantes locais</li>
-                                        <li><span class="fw-bold">Oportunidade:</span> Lacuna em serviços de BPO especializados e tecnológicos</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="card h-100">
-                                <div class="card-body">
-                                    <h3 class="h6 text-primary">Viabilidade Econômica</h3>
-                                    <div class="table-responsive">
-                                        <table class="table table-custom mb-0">
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">Métrica</th>
-                                                    <th scope="col">Projeção (OKAMOTO)</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>ROI Projetado</td>
-                                                    <td class="fw-bold text-success">>30% (Ano 1)</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Margem Operacional</td>
-                                                    <td class="fw-bold">18-22%</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Break-even</td>
-                                                    <td class="fw-bold">6-9 meses</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <div class="destaque mt-3">
-                                        <p class="mb-0 fw-bold text-success">Conclusão do Estudo:</p>
-                                        <p class="mb-0">A parceria é <span class="fw-bold text-success">altamente viável</span> e estratégica para otimizar operações e capturar valor no mercado goiano.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <!-- A seção "Estudo de Mercado e Análise de Viabilidade" foi removida da aba Proposta, conforme solicitado. -->
+
             </div>
 
-            <!-- Aba Sobre o Estudo (Conteúdo Novo) -->
+            <!-- Aba Sobre o Estudo (Conteúdo do Estudo e Fundamentação) -->
             <div class="tab-pane fade" id="estudo" role="tabpanel" aria-labelledby="estudo-tab">
                 <section class="mb-5">
                     <h2 class="h4 text-success mb-4">🔎 Sobre o Estudo e Fundamentação</h2>
@@ -594,7 +747,7 @@
             <p class="mb-2">📞 Contato: <a href="mailto:comercial@okamoto.com.br" class="text-decoration-none fw-bold">comercial@okamoto.com.br</a></p>
             <p class="mb-3">✉️ Alameda Leopoldo de Bulhões, 740 - St. Pedro Ludovico Goiânia - Goiás - Brasil - CEP: 74820-060</p>
             <div>
-                <!-- Botão com texto visível e sem a classe btn-sm para mais espaço -->
+                <!-- Botão com texto visível -->
                 <a href="#" class="btn btn-success">Solicitar Apresentação Completa</a>
             </div>
         </div>
